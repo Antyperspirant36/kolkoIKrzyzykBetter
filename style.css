@@ -2,7 +2,6 @@ body {
 	display: flex;
 	flex-direction: column;
 	font-family: Arial;
-	overflow: hidden;
 }
 
 main {
@@ -103,7 +102,7 @@ button:active {
 		}
 	}
 
-	svg {
+	.row svg {
 		width: 18vw;
 		height: 18vw;
 	}
