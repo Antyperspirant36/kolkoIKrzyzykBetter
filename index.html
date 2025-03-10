@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>XO</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="game.js" defer></script>
+	</head>
+	<body>
+		<main>
+			<div class="col">
+				<div class="row" id="a1"></div>
+				<div class="row" id="a2"></div>
+				<div class="row" id="a3"></div>
+			</div>
+			<div class="col">
+				<div class="row" id="b1"></div>
+				<div class="row" id="b2"></div>
+				<div class="row" id="b3"></div>
+			</div>
+			<div class="col">
+				<div class="row" id="c1"></div>
+				<div class="row" id="c2"></div>
+				<div class="row" id="c3"></div>
+			</div>
+		</main>
+		<article>
+			<div class="misc" id="red">
+				<div class="scores">
+					<div class="xScores">
+						<img src="x.svg" alt="O Icon" />
+						<p id="xScore">0</p>
+					</div>
+					<div class="oScores">
+						<img src="o.svg" alt="X Icon" />
+						<p id="oScore">0</p>
+					</div>
+				</div>
+				<button type="reset" onclick="reset()"><span>Reset</span></button>
+			</div>
+		</article>
+		<script>
+			document.querySelectorAll(".row").forEach((element) => {
+				element.addEventListener("click", (event) => {
+					click(event.target.id);
+				});
+			});
+		</script>
+	</body>
+</html>
