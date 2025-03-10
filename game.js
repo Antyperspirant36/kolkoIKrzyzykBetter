@@ -45,11 +45,9 @@ const click = id => {
     const currentSquare = document.getElementById(id);
     if (currentSquare.innerHTML === '') {
         if (currentSquare.innerHTML = player === 0) {
-            currentSquare.innerHTML = 'O';
-            currentSquare.style.color = "red";
+            currentSquare.innerHTML = `<svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100.000000 100.000000" preserveAspectRatio="xMidYMid meet"> <g transform="translate(0.000000,100.000000) scale(0.100000,-0.100000)" fill="#ff0000" stroke="none"> <path d="M393 946 c-83 -20 -159 -65 -221 -130 -174 -182 -174 -450 0 -632 183 -191 474 -191 656 0 180 189 175 465 -12 644 -117 112 -270 155 -423 118z m226 -85 c216 -67 322 -314 224 -524 -59 -126 -177 -206 -318 -215 -215 -14 -389 139 -403 353 -17 272 235 468 497 386z"/> </g> </svg>`;
         } else {
-            currentSquare.innerHTML = 'X';
-            currentSquare.style.color = "blue";
+            currentSquare.innerHTML = `<svg  version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100.000000 100.000000"  preserveAspectRatio="xMidYMid meet">  <g transform="translate(0.000000,100.000000) scale(0.050000,-0.050000)" fill="#0000ff" stroke="none"> <path d="M0 1935 c0 -58 47 -112 435 -500 l435 -435 -435 -435 c-388 -388 -435 -442 -435 -500 0 -164 89 -106 565 370 l435 435 435 -435 c388 -388 442 -435 500 -435 164 0 106 89 -370 565 l-435 435 435 435 c476 476 534 565 370 565 -58 0 -112 -47 -500 -435 l-435 -435 -435 435 c-476 476 -565 534 -565 370z"/> </g> </svg>`;
         };
         player = player === 0 ? 1 : 0;
         const CheckWin = () => {
@@ -59,16 +57,16 @@ const click = id => {
                 const IsO = Combination.every(item => item.innerHTML === 'O');
                 if (IsX) {
                     console.log('X wins');
-                    alert("X wygrał");
                     XWins++;
                     document.getElementById('xScore').innerHTML = XWins;
+                    alert("X wygrał");
                     return true;
                 }
                 if (IsO) {
                     console.log('O wins');
-                    alert("O wygrało");
                     OWins++;
                     document.getElementById('oScore').innerHTML = OWins;
+                    alert("O wygrało");
                     return true;
                 }
             }
