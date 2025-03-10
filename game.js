@@ -86,6 +86,7 @@ const reset = () => {
 
     player = 0;
 
+    Won = false;
     for (let i = 0; i < Letters.length; i++) {
         for (let j = 0; j < Numbers.length; j++) {
             document.getElementById(Letters[i] + Numbers[j]).innerHTML = "";
